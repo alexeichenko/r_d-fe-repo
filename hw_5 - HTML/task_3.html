@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 03</title>
+  <script>
+    function initFullscreen() {
+      var elementFullscreen = document.getElementById("fullscreenElement");
+      var buttonFullscreen = document.getElementById("toggleFullscreen");
+
+      function toggleFullscreen() {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+          /* дефолтні стилі блоку */
+          blockDefaultStyle();
+        } else {
+          // =========================================
+          /* перший варіант був таким, але в мене відкриває блок на всю сторінку без відображення внутрішнього вмісту */
+          // elementFullscreen.requestFullscreen();
+          // =========================================
+          /* такий запис дозволяє перевести всю HTML сторінку в повноекранний режим, з нормальним відображенням вмісту */
+          document.documentElement.requestFullscreen();
+          /* тому тут я дописую поведінку стилів блоку при переході в повноєкранний режим */
+          blockFullscreenStyle();
+        }
+      }
+      function blockDefaultStyle() {
+        elementFullscreen.style.width = '300px';
+        elementFullscreen.style.height = '200px';
+        elementFullscreen.style.border = '2px solid black';
+        elementFullscreen.style.color = 'black';
+        elementFullscreen.style.backgroundColor = 'inherit';
+      }
+      function blockFullscreenStyle() {
+        elementFullscreen.style.width = '100%';
+        elementFullscreen.style.height = '100vh';
+        elementFullscreen.style.border = 'none';
+        elementFullscreen.style.color = 'white';
+        elementFullscreen.style.backgroundColor = 'black';
+      }
+      buttonFullscreen.addEventListener('click', toggleFullscreen);
+    }
+    document.addEventListener('DOMContentLoaded', initFullscreen);
+  </script>
+</head>
+
+<body>
+  <div id="fullscreenElement" style="width: 300px; height: 200px; border: 2px solid black;">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos ea, officiis minima quibusdam, voluptas repudiandae
+      alias aperiam eaque dolorem eveniet similique quis, repellat deleniti obcaecati itaque sapiente rem quisquam nam!
+    </p>
+    <button id="toggleFullscreen">Fullscreen</button>
+  </div>
+</body>
+
+</html>
