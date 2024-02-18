@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__container">
+        <a href="index.html" class="header__logo"><img src="/src/images/logo.svg" alt="logo"></a>
+        <div class="header__menu menu">
+          <div class="menu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+              <li class="menu__item"><a href="#projects" class="menu__link">Proects</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="onTop"><img src="src/images/icon-arrow-down.svg" alt="on top"></button>
+  </header>
+  <main class="main">
+    <section class="intro">
+      <h1>We are creatives</h1>
+      <a href="#articles"><img src="src/images/icon-arrow-down.svg" alt="arrow"></a>
+    </section>
+    <section class="articles" id="articles">
+      <div class="articles__container">
+        <article class="article">
+          <a href="#" class="article__button button-yellow">learn more</a>
+          <h2 class="article__title title-yellow">Transform your brand</h2>
+          <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, saepe? Aspernatur
+            minus sed quidem laudantium necessitatibus velit cumque impedit amet.</p>
+        </article>
+        <picture class="articles__design">
+          <source media="(min-width: 1025px)" srcset="src/images/desktop/image-transform.jpg">
+          <source media="(max-width: 1024px)" srcset="src/images/mobile/image-transform.jpg">
+          <img src="src/images/desktop/image-transform.jpg" alt="article design">
+        </picture>
+      </div>
+      <div class="articles__container">
+        <picture class="articles__design">
+          <source media="(min-width: 1025px)" srcset="src/images/desktop/image-stand-out.jpg">
+          <source media="(max-width: 1024px)" srcset="src/images/mobile/image-stand-out.jpg">
+          <img src="src/images/desktop/image-stand-out.jpg" alt="article design">
+        </picture>
+        <article class="article">
+          <a href="#" class="article__button button-red">learn more</a>
+          <h2 class="article__title title-red">Stand out to the right audience</h2>
+          <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, saepe? Aspernatur
+            minus sed quidem laudantium necessitatibus velit cumque impedit amet.</p>
+        </article>
+      </div>
+    </section>
+    <section class="design" id="projects">
+      <article class="graphic-design">
+        <figure>
+          <img src="src/images/desktop/image-graphic-design.jpg" alt="pic">
+          <figcaption>
+            <h3>Graphic Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure fuga ad amet dicta eum vitae sapiente
+              necessitatibus adipisci, debitis explicabo!</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="photo">
+        <figure>
+          <img src="src/images/desktop/image-photography.jpg" alt="pic">
+          <figcaption>
+            <h3>Photo Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure fuga ad amet dicta eum vitae sapiente
+              necessitatibus adipisci, debitis explicabo!</p>
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+    <section class="testimonials">
+      <h2>Client testimonials</h2>
+      <div class="testimonials__body">
+        <figure class="testimonials__item">
+          <img src="src/images/image-emily.jpg" alt="author">
+          <figcaption>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus amet ducimus enim, possimus
+              voluptates facere.</p>
+            <div class="testimonials__author">
+              <h3>Emily R.</h3>
+              <span>Marketing Director</span>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="testimonials__item">
+          <img src="src/images/image-thomas.jpg" alt="author">
+          <figcaption>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus amet ducimus enim, possimus
+              voluptates facere.</p>
+            <div class="testimonials__author">
+              <h3>Thomas S.</h3>
+              <span>Chief Operating Officer</span>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="testimonials__item">
+          <img src="src/images/image-jennie.jpg" alt="author">
+          <figcaption>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus amet ducimus enim, possimus
+              voluptates facere.</p>
+            <div class="testimonials__author">
+              <h3>Jennie F.</h3>
+              <span>Business Owner</span>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="gallery">
+      <picture class="gallery__item">
+        <source media="(min-width: 1025px)" srcset="src/images/desktop/image-gallery-milkbottles.jpg">
+        <source media="(max-width: 1024px)" srcset="src/images/mobile/image-gallery-milkbottles.jpg">
+        <img src="src/images/desktop/image-gallery-milkbottles.jpg" alt="gallery image">
+      </picture>
+      <picture class="gallery__item">
+        <source media="(min-width: 1025px)" srcset="src/images/desktop/image-gallery-orange.jpg">
+        <source media="(max-width: 1024px)" srcset="src/images/mobile/image-gallery-orange.jpg">
+        <img src="src/images/desktop/image-gallery-orange.jpg" alt="gallery image">
+      </picture>
+      <picture class="gallery__item">
+        <source media="(min-width: 1025px)" srcset="src/images/desktop/image-gallery-cone.jpg">
+        <source media="(max-width: 1024px)" srcset="src/images/mobile/image-gallery-cone.jpg">
+        <img src="src/images/desktop/image-gallery-cone.jpg" alt="gallery image">
+      </picture>
+      <picture class="gallery__item">
+        <source media="(min-width: 1025px)" srcset="src/images/desktop/image-gallery-sugarcubes.jpg">
+        <source media="(max-width: 1024px)" srcset="src/images/mobile/image-gallery-sugar-cubes.jpg">
+        <img src="src/images/desktop/image-gallery-sugarcubes.jpg" alt="gallery image">
+      </picture>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="logo">
+      <a href="index.html"><img src="src/images/logo-green.svg" alt="logo"></a>
+    </div>
+    <ul class="nav">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li>
+    </ul>
+    <ul class="social">
+      <li><a href="#" target="_blank" rel="noopener"><img src="src/images/icon-facebook.svg" alt="facebook"></a></li>
+      <li><a href="#" target="_blank" rel="noopener"><img src="src/images/icon-instagram.svg" alt="instagram"></a></li>
+      <li><a href="#" target="_blank" rel="noopener"><img src="src/images/icon-twitter.svg" alt="twitter"></a></li>
+      <li><a href="#" target="_blank" rel="noopener"><img src="src/images/icon-pinterest.svg" alt="pinterest"></a></li>
+    </ul>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>
