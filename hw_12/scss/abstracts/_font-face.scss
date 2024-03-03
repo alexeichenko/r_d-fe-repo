@@ -1,0 +1,17 @@
+$font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+$font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+@import url("https://fonts.googleapis.com/css?family=Barlow:600&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Fraunces:700,900&display=swap");
+
+$font-barlow: Barlow, #{$font-sans};
+$font-fraunces: Fraunces, #{$font-sans};
+
+// font-family
+$font-family: (
+  // family - font
+  --barlow-sans: $font-barlow,
+  --fraunces-sans: $font-fraunces,
+);

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Robot Dreams: SCSS. Home work 12.</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__row">
+          <a href="index.html" class="header__logo"><img src="src/img/logo.svg" alt="logo"></a>
+          <div class="header__menu menu burger">
+            <button class="menu__button burger__button"><span></span><span></span><span></span></button>
+            <nav class="menu__body burger__body">
+              <ul class="menu__list burger__list">
+                <li class="menu__item burger__item">
+                  <a href="#about" class="menu__link burger__link" title="ABOUT">About</a>
+                </li>
+                <li class="menu__item burger__item">
+                  <a href="#services" class="menu__link burger__link" title="SERVICES">Services</a>
+                </li>
+                <li class="menu__item burger__item">
+                  <a href="#projects" class="menu__link burger__link" title="PROJECTS">Projects</a>
+                </li>
+                <li class="menu__item burger__item">
+                  <a href="#contact" class="menu__link menu__link_accent burger__link" title="CONTACT">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__title">
+          <h1>WE ARE CREATIVES</h1>
+        </div>
+        <a href="#projects" class="header__scroll"><img src="src/img/icon-arrow-down.svg" alt="scroll down"></a>
+      </div>
+    </header>
+    <main class="main">
+      <button class="on-top-button" type="submit"><img src="src/img/icon-arrow-down.svg" alt="on top button"></button>
+      <section class="articles" id="projects">
+        <div class="articles__row">
+          <article class="articles__article article">
+            <h2 class="article__title">Transform your brand</h2>
+            <div class="article__text">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae consequuntur animi ducimus
+                consectetur, quas provident accusantium perspiciatis eius eligendi et?</p>
+            </div>
+            <a href="#" class="article__button article__button_yellow">Learn more</a>
+          </article>
+          <picture class="articles__picture">
+            <source media="(min-width: 1024px)" srcset="src/img/desktop/image-transform.jpg">
+            <source media="(max-width: 1024px)" srcset="src/img/mobile/image-transform.jpg">
+            <img src="src/img/desktop/image-transform.jpg" alt="article picture">
+          </picture>
+        </div>
+        <div class="articles__row">
+          <picture class="articles__picture">
+            <source media="(min-width: 1024px)" srcset="src/img/desktop/image-stand-out.jpg">
+            <source media="(max-width: 1024px)" srcset="src/img/mobile/image-stand-out.jpg">
+            <img src="src/img/desktop/stand-out.jpg" alt="article picture">
+          </picture>
+          <article class="articles__article article">
+            <h2 class="article__title">Stand out to the right audience</h2>
+            <div class="article__text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum assumenda velit, a quo dolore
+                fuga magnam accusantium tempora maxime!</p>
+            </div>
+            <a href="#" class="article__button article__button_red">Learn more</a>
+          </article>
+        </div>
+      </section>
+      <section class="design">
+        <figure class="design__card">
+          <img src="src/img/desktop/image-graphic-design.jpg" alt="design card picture" class="design__picture">
+          <figcaption class="design__description">
+            <h3 class="design__title">Graphic Design</h3>
+            <div class="design__text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab doloribus laborum voluptates illum labore
+                modi temporibus incidunt fuga autem optio.</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="design__card">
+          <img src="src/img/desktop/image-photography.jpg" alt="design card picture" class="design__picture">
+          <figcaption class="design__description">
+            <h3 class="design__title">Photography</h3>
+            <div class="design__text">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consequatur exercitationem molestiae
+                asperiores rerum excepturi sit vel dolorum maxime minima!</p>
+            </div>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="testimonials" id="about">
+        <div class="testimonials__container">
+          <h2 class="testimonials__title">Client Testimonials</h2>
+          <ul class="testimonials__list">
+            <li class="testimonials__item">
+              <figure class="testimonials__card card-testimonial">
+                <img src="src/img/image-emily.jpg" alt="author" class="card-testimonial__image">
+                <figcaption class="card-testimonial__body">
+                  <div class="card-testimonial__text">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, adipisci? Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Voluptatum at deleniti quam quis, recusandae optio blanditiis
+                      fuga totam nostrum neque!</p>
+                  </div>
+                  <h4 class="card-testimonial__name">Emily R.</h4>
+                  <div class="card-testimonial__caption">
+                    <p>Marketing Director</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonials__item">
+              <figure class="testimonials__card card-testimonial">
+                <img src="src/img/image-thomas.jpg" alt="author" class="card-testimonial__image">
+                <figcaption class="card-testimonial__body">
+                  <div class="card-testimonial__text">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quidem! Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Doloribus, error! Lorem ipsum, dolor sit amet consectetur
+                      adipisicing elit. Dolorem, corrupti?</p>
+                  </div>
+                  <h4 class="card-testimonial__name">Thomas S.</h4>
+                  <div class="card-testimonial__caption">
+                    <p>Chief Operating Officer</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonials__item">
+              <figure class="testimonials__card card-testimonial">
+                <img src="src/img/image-jennie.jpg" alt="author" class="card-testimonial__image">
+                <figcaption class="card-testimonial__body">
+                  <div class="card-testimonial__text">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, quo? Lorem, ipsum dolor
+                      sit amet consectetur adipisicing elit. Commodi error beatae sapiente cupiditate illum quasi itaque
+                      nisi quisquam sit repellendus?</p>
+                  </div>
+                  <h4 class="card-testimonial__name">Jennie F.</h4>
+                  <div class="card-testimonial__caption">
+                    <p>Business Owner</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="gallery">
+        <picture class="gallery__picture">
+          <source media="(min-width: 1024px)" srcset="src/img/desktop/image-gallery-milkbottles.jpg">
+          <source media="(max-width: 1024px)" srcset="src/img/mobile/image-gallery-milkbottles.jpg">
+          <img src="src/img/desktop/image-gallery-milkbottles.jpg" alt="gallery image" class="gallery__image">
+        </picture>
+        <picture class="gallery__picture">
+          <source media="(min-width: 1024px)" srcset="src/img/desktop/image-gallery-orange.jpg">
+          <source media="(max-width: 1024px)" srcset="src/img/mobile/image-gallery-orange.jpg">
+          <img src="src/img/desktop/image-gallery-orange.jpg" alt="gallery image" class="gallery__image">
+        </picture>
+        <picture class="gallery__picture">
+          <source media="(min-width: 1024px)" srcset="src/img/desktop/image-gallery-cone.jpg">
+          <source media="(max-width: 1024px)" srcset="src/img/mobile/image-gallery-cone.jpg">
+          <img src="src/img/desktop/image-gallery-cone.jpg" alt="gallery image" class="gallery__image">
+        </picture>
+        <picture class="gallery__picture">
+          <source media="(min-width: 1024px)" srcset="src/img/desktop/image-gallery-sugarcubes.jpg">
+          <source media="(max-width: 1024px)" srcset="src/img/desktop/image-gallery-sugarcubes.jpg">
+          <img src="src/img/desktop/image-gallery-sugarcubes.jpg" alt="gallery image" class="gallery__image">
+        </picture>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="#" class="footer__logo"><img src="src/img/logo-green.svg" alt="logo"></a>
+        <ul class="footer__nav">
+          <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Services</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Projects</a></li>
+        </ul>
+        <ul class="footer__socials">
+          <li class="footer__social"><a href="#" class="footer__social_link"><img src="src/img/icon-facebook.svg"
+                alt="social media icon"></a></li>
+          <li class="footer__social"><a href="#" class="footer__social_link"><img src="src/img/icon-instagram.svg"
+                alt="social media icon"></a></li>
+          <li class="footer__social"><a href="#" class="footer__social_link"><img src="src/img/icon-twitter.svg"
+                alt="social media icon"></a></li>
+          <li class="footer__social"><a href="#" class="footer__social_link"><img src="src/img/icon-pinterest.svg"
+                alt="social media icon"></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+  </div>
+</body>
+
+</html>

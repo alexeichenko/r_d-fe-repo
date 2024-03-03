@@ -1,0 +1,61 @@
+@use '../abstracts';
+
+.card-testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: abstracts.function_em(50);
+  padding: 5%;
+  &__image {
+    border-radius: 50%;
+    width: 100px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: abstracts.function_em(10);
+  }
+
+  &__text {
+    &:not(:last-child){
+    margin-bottom: abstracts.function_em(40);
+    };
+    @include abstracts.mixin_font(
+      $font-family: var(--barlow-sans),
+      $cl-ratio: 1.2,
+      $cl-px: 18,
+      $font-weight: 600,
+      $line-height: 1.2,
+      $text-align: center,
+      $color:  var(--global-grey)
+    );
+  }
+
+  &__name {
+    @include abstracts.mixin_font(
+      $font-family: var(--fraunces-sans),
+      $cl-ratio: 1.2,
+      $cl-px: 32,
+      $font-weight: 700,
+      $line-height: 1.5,
+      $text-align: center,
+      $color: var(--global-dark-blue)
+    );
+  }
+
+  &__caption {
+    @include abstracts.mixin_font(
+      $font-family: var(--barlow-sans),
+      $cl-ratio: 1.2,
+      $cl-px: 18,
+      $font-weight: 600,
+      $line-height: 1.2,
+      $text-align: center,
+      $color:  var(--global-silver)
+    );
+  }
+}
