@@ -1,0 +1,239 @@
+@use "../abstracts";
+@use "../base/media-queries" as breakpoint;
+
+@use "../components/card-testimonial" as *;
+@use "../components/on-top-button" as *;
+
+//  article section
+.articles {
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    display: flex;
+    @include breakpoint.mq(1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__article {
+    flex: 0 1 50%;
+    @include breakpoint.mq(1024px) {
+      flex: 1;
+      order: 1;
+    }
+  }
+
+  &__picture {
+    flex: 0 1 50%;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.article {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: abstracts.function_em(25);
+  padding: 4%;
+  @include breakpoint.mq(1024px) {
+    padding: 15%;
+    align-items: center;
+    text-align: center;
+  };
+  &__title {
+    @include abstracts.mixin_font(
+      $font-family: var(--fraunces-sans),
+      $cl-px: 52,
+      $font-weight: 900,
+      $line-height: 1.5,
+      $color: var(--global-dark-blue)
+    );
+  }
+
+  &__text {
+    @include abstracts.mixin_font(
+      $font-family: var(--barlow-sans),
+      $cl-ratio: 1.2,
+      $cl-px: 18,
+      $font-weight: 600,
+      $line-height: 1.35,
+      $color: var(--global-grey)
+    );
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    @include abstracts.mixin_font(
+      $font-family: var(--fraunces-sans),
+      $cl-px: 14,
+      $font-weight: 700,
+      $line-height: 1.5,
+      $text-transform: uppercase,
+      $color: var(--global-dark-blue)
+    );
+    @media (hover: hover) {
+      @include abstracts.mixin_transition($time: e-light, $timing-function: in-out-cubic);
+      &:hover {
+        scale: 1.05;
+        translate: 2.5% 0;
+      }
+    };
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      z-index: -1;
+      border-radius: 9999px;
+    };
+
+    &_yellow {
+      &::after {
+        background-color: var(--accent-yellow);
+      }
+    }
+
+    &_red {
+      &::after {
+        background-color: var(--accent-red);
+      }
+    }
+  }
+}
+// _______________
+
+//  design section
+.design {
+  display: flex;
+  @include breakpoint.mq(1024px) {
+    flex-direction: column;
+  }
+
+  &__card {
+    flex: 0 1 50%;
+    position: relative;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include abstracts.mixin_font(
+      $font-family: var(--fraunces-sans),
+      $cl-px: 36,
+      $font-weight: 900,
+      $line-height: 1.5,
+      $text-align: center,
+      $color: #000
+    );
+    opacity: 0.6;
+  }
+
+  &__text {
+    padding: 6%;
+    width: min(70%, 100% - 4rem);
+    @include breakpoint.mq(tablet) {
+      width: 100%;
+    }
+    @include abstracts.mixin_font(
+      $font-family: var(--barlow-sans),
+      $cl-ratio: 1.2,
+      $cl-px: 18,
+      $font-weight: 600,
+      $line-height: 1.2,
+      $text-align: center,
+      $color: #000
+    );
+    opacity: 0.4;
+  }
+}
+// _______________
+
+//  testimonials section
+.testimonials {
+  @include abstracts.mixin_clamp(margin-top, $px: 192);
+  &__container {
+  }
+
+  &__title {
+    @include abstracts.mixin_font(
+      $font-family: var(--fraunces-sans),
+      $cl-px: 36,
+      $font-weight: 900,
+      $line-height: 1.5,
+      $letter-spacing: 5px,
+      $text-align: center,
+      $text-transform: uppercase,
+      $color: var(--global-grey)
+    );
+    &:not(:last-child) {
+      margin-bottom: abstracts.function_em(40);
+    }
+  }
+
+  &__list {
+    display: flex;
+    @include breakpoint.mq(1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    @include breakpoint.mq(1024px) {
+      border-bottom: 1px dashed #c2bfba82;
+    }
+  }
+
+  &__card {
+  }
+}
+// _______________
+
+// gallery section
+.gallery {
+  margin-top: min(abstracts.function_em(192), 100% - 4rem);
+  display: flex;
+  background-color: var(--global-sea-blue);
+  @include breakpoint.mq(1024px) {
+    flex-direction: column;
+  }
+  &__picture {
+    flex: 1;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @media (hover: hover) {
+      @include abstracts.mixin_transition($time: medium, $timing-function: in-out-cubic);
+      &:hover {
+        scale: 0.994;
+        translate: 0 -3%;
+        border-radius: 50px;
+        box-shadow: -20px 30px 100px -80px #000;
+      }
+    }
+  }
+}

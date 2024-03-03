@@ -1,0 +1,67 @@
+@use "../abstracts";
+@use "../base/media-queries" as breakpoint;
+
+.footer {
+  padding: min(abstracts.function_em(50), 100% - 4rem) 0;
+  background-color: var(--global-sea-blue);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: abstracts.function_em(50);
+  }
+
+  &__logo {
+    scale: 1.5;
+    @media (hover: hover) {
+      @include abstracts.mixin_transition($time: light, $timing-function: out-back);
+      &:hover {
+        scale: 1.6;
+      }
+    };
+  }
+
+  &__nav {
+    display: flex;
+    gap: abstracts.function_em(50);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: inline-block;
+    @include abstracts.mixin_font(
+      $font-family: var(--barlow-sans),
+      $cl-ratio: 1.2,
+      $cl-px: 18,
+      $font-weight: 600,
+      $line-height: 1.5,
+      $color: var(--global-blue-green)
+    );
+    @media (hover: hover) {
+      @include abstracts.mixin_transition($time: light, $timing-function: out-back);
+      &:hover {
+        scale: 1.1;
+      }
+    };
+  }
+
+  &__socials {
+    display: flex;
+    gap: abstracts.function_em(25);
+  }
+
+  &__social {
+    @media (hover: hover) {
+      @include abstracts.mixin_transition($time: light, $timing-function: out-back);
+      &:hover {
+        scale: 1.2;
+      }
+    };
+    &_link {
+    }
+  }
+}
